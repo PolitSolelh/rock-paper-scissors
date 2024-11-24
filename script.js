@@ -42,6 +42,9 @@ function playRound() {
 const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice();
 
+console.log("You picked : " + humanSelection);
+console.log("Computer picked : " + computerSelection);
+
     if (humanSelection == 'rock' && computerSelection == 'scissors') {
         console.log('human wins!')
         humanScore++;
@@ -66,16 +69,13 @@ const computerSelection = getComputerChoice();
         computerScore++;
         }
 
-        console.log("You picked : " + humanSelection);
-        console.log("Computer picked : " + computerSelection);
-
 }
 
 function playGame() {
     for(let rounds = 1; rounds <= 5; rounds++) {
         playRound();
-        console.log("This is round " + rounds);
         console.log("Your score : " + humanScore + " | " + computerScore + " : Computer score");
+        console.log("This is round " + rounds);
     }
 }
 
