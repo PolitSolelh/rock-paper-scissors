@@ -38,39 +38,38 @@ function getHumanChoice() {
     return humanChoice;
 }
 
-function playRound(humanSelection, computerSelection) {
-    if(humanSelection = "rock") {
-        if(computerSelection = "rock") {
-            console.log("It's a draw")
-        } else if(computerSelection = "paper") {
-            console.log("The computer wins")
-        } else if (computerSelection = "scissors") {
-            console.log("You win")
-        }
-    }
-
-    else if(humanSelection = "paper") {
-        if(computerSelection = "rock") {
-            console.log("You win")
-        } else if(computerSelection = "paper") {
-            console.log("It's a draw")
-        } else if (computerSelection = "scissors") {
-            console.log("The computer wins")
-        }
-    }
-
-    else if(humanSelection = "scissors") {
-        if(computerSelection = "rock") {
-            console.log("The computer wins")
-        } else if(computerSelection = "paper") {
-            console.log("You win")
-        } else if(computerSelection = "scissors") {
-            console.log("It's a draw")
-        }
-    }
-}
-
+function playRound() {
 const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice();
 
-playRound(humanSelection, computerSelection);
+console.log("You picked : " + humanSelection);
+console.log("Computer picked : " + computerSelection);
+
+    if (humanSelection == 'rock' && computerSelection == 'scissors') {
+        console.log('human wins!')
+        humanScore++;
+    }
+
+    else if (humanSelection == 'paper' && computerSelection == 'rock') {
+        console.log('human wins!')
+        humanScore++;
+    }
+
+    else if (humanSelection == 'scissors' && computerSelection == 'paper') {
+        console.log('human wins!')
+        humanScore++;
+    }
+    
+    else if (humanSelection == computerSelection) {
+        console.log('tie!')
+    }
+    
+    else {
+        console.log('computer wins!')
+        computerScore++;
+        }
+
+    console.log("Your score : " + humanScore + " | " + computerScore + " : Computer score")
+}
+
+playRound();
