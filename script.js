@@ -72,7 +72,7 @@ console.log("Computer picked : " + computerSelection);
 }
 
 function playGame() {
-    for(let rounds = 1; rounds <= 5; rounds++) {
+    for(let i = 1; i <= 5; i++) {
         playRound();
         console.log("Your score : " + humanScore + " | " + computerScore + " : Computer score");
         console.log("This is round " + rounds);
